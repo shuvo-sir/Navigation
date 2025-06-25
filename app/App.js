@@ -21,6 +21,9 @@ export default function App() {
               <Text style={{color: "#fff", fontSize: 16}}>Menu</Text>
             </Pressable>
           ),
+          contentStyle: {
+            backgroundColor: "#e8e4f3",
+          },
       }}>
         <Stack.Screen name="Home"
           component={HomeScreen}
