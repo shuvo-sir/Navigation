@@ -21,9 +21,15 @@ export default function App(){
                         drawerContentStyle: {
                             backgroundColor: "#c6cbef",
                         },
-                        drawerContentContainerStyle: {
-                            backgroundColor: "red",
+                       
+                        drawerItemStyle: {
+                            borderColor: "black",
+                            borderWidth: 1,
                         },
+                        drawerLabelStyle: {
+                            fontSize: 20,
+                            fontFamily: "Georgia",
+                        }
                     }}
                 />
                 <Drawer.Screen name='Settings' component={SettingsScreen}/>
