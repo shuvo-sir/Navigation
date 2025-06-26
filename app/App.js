@@ -8,11 +8,11 @@ const Drawer = createDrawerNavigator();
 
 export default function App(){
     return (
-        <NavigationContainer>
+       
             <Drawer.Navigator>
                 <Drawer.Screen name='Dashboard' component={DashboardScreen}/>
-                <Drawer.Screen name='Settons' component={SettingsScreen}/>
+                <Drawer.Screen name='Settings' component={SettingsScreen}/>
             </Drawer.Navigator>
-        </NavigationContainer>
+      
     );
 }
