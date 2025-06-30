@@ -9,7 +9,11 @@ const Tab = createBottomTabNavigator()
 
 export default function App() {
     return (
-        <Tab.Navigator>
+        <Tab.Navigator 
+            screenOptions={{
+                tabBarActiveTintColor: "purple"
+            }}
+        >
             <Tab.Screen name="Course List" component={CourseListScreen}/>
             <Tab.Screen name="Profile" component={ProfileScreen}/>
             <Tab.Screen name="Setting"component={SettingsScreen}/>
