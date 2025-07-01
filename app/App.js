@@ -12,11 +12,19 @@ export default function App() {
     return (
         <Tab.Navigator 
             screenOptions={{
-                tabBarActiveTintColor: "purple",
-                tabBarInactiveTintColor: "blck"
+                tabBarActiveTintColor: "black",
+                tabBarInactiveTintColor: "lightblue"
             }}
         >
-            <Tab.Screen name="Course List" component={CourseListScreen}/>
+            <Tab.Screen 
+                name="Course List" 
+                component={CourseListScreen}
+                options={{
+                    tabBarIcon: ({color}) => (
+                        <Ionicons name="book" size={20} color={color}/>
+                    ),
+                }}
+            />
             <Tab.Screen 
                 name="Profile" 
                 component={ProfileScreen}
@@ -24,10 +32,19 @@ export default function App() {
                     tabBarLabel: "My profile",
                     tabBarIcon: ({color}) => (
                         <Ionicons name="person" size={20} color={color}/>
-                    )
+                    ),
+                    tabBarBadge: 3,
                 }}
             />
-            <Tab.Screen name="Setting"component={SettingsScreen}/>
+            <Tab.Screen 
+                name="Setting"
+                component={SettingsScreen}
+                options={{
+                    tabBarIcon: ({color}) => (
+                        <Ionicons name="settings" size={20} color={color}/>
+                    ),
+                }}
+            />
         </Tab.Navigator>
-    )
+    );
 }
